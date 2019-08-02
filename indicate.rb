@@ -4,14 +4,15 @@ cgi = CGI.new
 
 # After receiving data, return a response in HTML format
 cgi.out("type" => "text/html", "charset" => "UTF-8") {
-  # Retrieve the data of "goya" which is the mark of information by the description cgi ['goya'] and assign it to a local variable
-  get = cgi['goya']
+  # Fetch received data cgi ['input'] and assign to local variable
+  # Retrieve information from the marker 'input'
+  get = cgi['input']
 
   # Return the response in HTML
   "<html>
     <body>
-      <p>The size of the bitter gourd and the information of the buyer are as follows</p>
-      String：#{get}
+      <p>The received string is as follows</p>
+      <p>String：#{get}</p>
     </body>
   </html>"
 }
