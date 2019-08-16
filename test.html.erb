@@ -31,7 +31,7 @@
     </form>
 ​
     <% result1 = connection.exec("select date, weight, give_for from crops
-     where quality ='f';") %>
+     where quality ='false';") %>
     <% date = [] %>
      
     <% result1.each do |record| %>
@@ -45,5 +45,5 @@
       <input type="text" name="goya1" value ="<%= date.join(' ') %>">
       <input type="submit" name="submit" style="background: skyblue;color:white" >
     </form>
-  </body>
+  </bodsy>
 </html>
